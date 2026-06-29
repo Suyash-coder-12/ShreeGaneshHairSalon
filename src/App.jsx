@@ -18,21 +18,21 @@ const fadeUp = {
 
 function App() {
   const servicesData = [
-    { title: "Simple Haircut", price: "₹50", desc: "Clean, sharp, aur aapke face ke hisaab se perfect style." },
-    { title: "Stylish Haircut", price: "₹70", desc: "Traditional haircut with a modern twist, tailored for you." },
-    { title: "Simple Beard Trim", price: "₹50", desc: "Proper trimming, line-up, aur perfect shape." },
-    { title: "Stylish Beard Trim", price: "₹60", desc: "Modern beard styling with a perfect finish." },
-    { title: "Haircut & Beard Trim", price: "₹120", desc: "Relaxing straight razor shave with face massage." },
-    { title: "Massage & Simple Scrub", price: "₹60", desc: "Relaxing massage with a simple scrub for a refreshed look." },
-    { title: "Massage & Haldi Scrub", price: "₹120", desc: "Relaxing massage with a haldi scrub for a refreshed look." },
-    { title: "Massage & Golden Scrub", price: "₹180", desc: "Relaxing massage with a golden scrub for a refreshed look." },
-    { title: "Massage & Chandan Lape Beard", price: "₹80", desc: "Relaxing massage with a chandan lape beard for a refreshed look." },
-    { title: "Massage & Chandan Lape Scrub", price: "₹250", desc: "Relaxing massage with a chandan lape scrub for a refreshed look." }
+    { title: "साधा हेअरकट (Simple Haircut)", price: "₹50", desc: "स्वच्छ, रेखीव आणि तुमच्या चेहऱ्यानुसार परफेक्ट स्टाईल." },
+    { title: "स्टायलिश हेअरकट (Stylish Haircut)", price: "₹70", desc: "तुमच्यासाठी खास मॉडर्न टच असलेला ट्रॅडिशनल हेअरकट." },
+    { title: "साधी दाढी (Simple Beard Trim)", price: "₹50", desc: "योग्य ट्रिमिंग, लाईन-अप आणि परफेक्ट आकार." },
+    { title: "स्टायलिश दाढी (Stylish Beard Trim)", price: "₹60", desc: "परफेक्ट फिनिशसह मॉडर्न बियर्ड स्टायलिंग." },
+    { title: "हेअरकट आणि दाढी (Haircut & Beard)", price: "₹120", desc: "फेस मसाजसह रिलॅक्सिंग शेव्ह." },
+    { title: "मसाज आणि साधा स्क्रब (Massage & Scrub)", price: "₹60", desc: "ताज्या लूकसाठी रिलॅक्सिंग मसाज आणि स्क्रब." },
+    { title: "मसाज आणि हळद स्क्रब (Haldi Scrub)", price: "₹120", desc: "चेहऱ्याच्या उजळपणासाठी हळद स्क्रब आणि मसाज." },
+    { title: "मसाज आणि गोल्डन स्क्रब (Golden Scrub)", price: "₹180", desc: "प्रीमियम ग्लोसाठी खास गोल्डन स्क्रब आणि मसाज." },
+    { title: "मसाज आणि चंदन लेप दाढी (Chandan Lape)", price: "₹80", desc: "थंड आणि फ्रेश अनुभवासाठी चंदन लेप आणि मसाज." },
+    { title: "मसाज आणि चंदन लेप स्क्रब (Chandan Scrub)", price: "₹250", desc: "संपूर्ण रिलॅक्सेशनसाठी चंदन लेप स्क्रब आणि मसाज." }
   ];
 
   const samples = [img1, img2, img3, img5, img8, img7, img4];
 
-  // Automated WhatsApp Message Trigger
+  // Automated WhatsApp Message Trigger (Marathi)
   const handleBooking = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -41,7 +41,7 @@ function App() {
     const service = e.target.service.value;
     
     const phoneNumber = "918767797002"; // Aapka specified backend number
-    const message = `Namaste Omkar Bhai! 🙏\n\n*New Appointment Request*\n\n• *Name:* ${name}\n• *Service Selected:* ${service}\n• *Date:* ${date}\n• *Contact Number:* ${phone}\n\nKindly confirm the slot available for the execution. Reverted from official system.`;
+    const message = `नमस्ते ओंकार भाऊ! 🙏\n\n*नवीन अपॉइंटमेंट विनंती*\n\n• *नाव:* ${name}\n• *सेवा:* ${service}\n• *तारीख:* ${date}\n• *मोबाईल नंबर:* ${phone}\n\nकृपया वेळ (Slot) कन्फर्म करा. धन्यवाद!`;
     
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -54,13 +54,13 @@ function App() {
       <nav className="fixed w-full z-50 px-8 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
         <div className="flex items-center gap-3">
           <img src={logoImg} alt="Official Logo" className="h-9 w-auto object-contain" />
-          <span className="text-lg font-bold tracking-tight text-blue-950 border-l border-slate-300 pl-3">Shree Ganesh Hair Salon</span>
+          <span className="text-lg font-bold tracking-tight text-blue-950 border-l border-slate-300 pl-3">श्री गणेश हेअर सलून</span>
         </div>
         
         <div className="hidden md:flex gap-8 text-xs font-semibold tracking-widest uppercase text-blue-900">
-          <a href="#services" className="hover:text-blue-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all">Services</a>
-          <a href="#samples" className="hover:text-blue-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all">Portfolio</a>
-          <a href="#book" className="hover:text-blue-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all">Secure Slot</a>
+          <a href="#services" className="hover:text-blue-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all">सेवा (Services)</a>
+          <a href="#samples" className="hover:text-blue-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all">आमचे काम (Portfolio)</a>
+          <a href="#book" className="hover:text-blue-600 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all">बुकिंग करा (Book)</a>
         </div>
       </nav>
 
@@ -76,19 +76,19 @@ function App() {
           className="relative z-20 text-center max-w-3xl mt-12"
         >
           <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-400/30 rounded-full text-xs font-semibold text-blue-400 tracking-wider uppercase mb-6">
-            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Authentic Premium Experience
+            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> अस्सल प्रीमियम अनुभव
           </motion.div>
           
           <motion.h1 variants={fadeUp} className="text-4xl sm:text-6xl font-black tracking-tight leading-tight mb-6">
-            ELEVATE YOUR STYLE <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">WITH PRECISION</span>
+            परफेक्ट लूक, <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">प्रीमियम स्टाईल</span>
           </motion.h1>
           
           <motion.p variants={fadeUp} className="text-slate-300 text-base md:text-lg max-w-xl mx-auto mb-10 font-normal leading-relaxed">
-            Accha mahol, badhiya gaane, aur ekdum perfect haircut. Aapke style ko upgrade karne ki zimmedari hamari. Experience unmatched executive grooming standard.
+            उत्तम वातावरण, छान गाणी आणि एकदम परफेक्ट हेअरकट. तुमची स्टाईल अपग्रेड करण्याची जबाबदारी आमची. आजच भेट द्या!
           </motion.p>
           
           <motion.a href="#book" variants={fadeUp} className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold text-xs uppercase tracking-widest hover:bg-blue-700 transition-all duration-300 rounded shadow-lg hover:shadow-blue-500/20 active:scale-95">
-            Book Appointment
+            अपॉइंटमेंट बुक करा
           </motion.a>
         </motion.div>
       </section>
@@ -97,8 +97,8 @@ function App() {
       <section id="services" className="py-28 px-6 md:px-16 lg:px-24 relative z-20 bg-white border-y border-slate-200">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">Professional Offerings</h2>
-            <p className="text-slate-500 text-sm max-w-md mx-auto">High-end craftsmanship metrics paired with competitive localized pricing.</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">आमच्या सेवा</h2>
+            <p className="text-slate-500 text-sm max-w-md mx-auto">योग्य दरात सर्वोत्तम आणि दर्जेदार व्यावसायिक सेवा.</p>
             <div className="w-12 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
           </div>
 
@@ -129,7 +129,7 @@ function App() {
       <section id="samples" className="py-28 px-6 md:px-16 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">Portfolio Lookbook</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">आमचे काम (Portfolio)</h2>
             <div className="w-12 h-1 bg-blue-600 mx-auto rounded-full"></div>
           </div>
           
@@ -145,7 +145,7 @@ function App() {
               >
                 <img 
                   src={imgUrl} 
-                  alt={`Grooming Standard Asset ${index + 1}`} 
+                  alt={`Haircut Sample ${index + 1}`} 
                   className="w-full h-64 object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-500"
                 />
               </motion.div>
@@ -160,29 +160,29 @@ function App() {
           <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-600 to-indigo-500"></div>
           
           <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-blue-950 mb-3">Secure Appointment Gateway</h2>
-            <p className="text-slate-500 text-xs md:text-sm">Line mein wait karne ki zaroorat nahi. Apna priority time slot book karo.</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-blue-950 mb-3">तुमची वेळ नोंदवा (Book Appointment)</h2>
+            <p className="text-slate-500 text-xs md:text-sm">रांगेत थांबण्याची गरज नाही. तुमची अपॉइंटमेंट आधीच बुक करा.</p>
           </div>
 
           <form onSubmit={handleBooking} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Full Name</label>
-                <input required name="name" type="text" className="w-full bg-white border border-slate-300 p-3 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all shadow-inner" placeholder="Enter full name" />
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">पूर्ण नाव (Full Name)</label>
+                <input required name="name" type="text" className="w-full bg-white border border-slate-300 p-3 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all shadow-inner" placeholder="तुमचे नाव येथे टाका" />
               </div>
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Phone Number</label>
-                <input required name="phone" type="tel" className="w-full bg-white border border-slate-300 p-3 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all shadow-inner" placeholder="e.g. +91XXXXXXXXXX" />
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">मोबाईल नंबर (Phone Number)</label>
+                <input required name="phone" type="tel" className="w-full bg-white border border-slate-300 p-3 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all shadow-inner" placeholder="उदा. 9876543210" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Target Date</label>
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">तारीख (Date)</label>
                 <input required name="date" type="date" className="w-full bg-white border border-slate-300 p-3 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all shadow-inner" />
               </div>
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Required Execution</label>
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">सेवा निवडा (Select Service)</label>
                 <select name="service" className="w-full bg-white border border-slate-300 p-3 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all">
                   {servicesData.map((srv, i) => (
                     <option key={i} value={srv.title}>{srv.title} ({srv.price})</option>
@@ -195,7 +195,7 @@ function App() {
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-white">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.898-4.45 9.898-9.898 0-2.64-1.027-5.122-2.894-6.988-1.866-1.867-4.348-2.895-6.987-2.895-5.451 0-9.9 4.451-9.9 9.899 0 2.064.539 3.992 1.565 5.617l-1.048 3.828 3.974-1.155zm-1.636-6.495c.094-.153.351-.243.743-.438.39-.196 2.308-1.14 2.666-1.27.358-.13.618-.195.877.195.258.39.998 1.27 1.222 1.53.224.26.449.293.84.196.39-.098 1.644-.606 3.131-1.942 1.157-1.036 1.938-2.316 2.162-2.707.224-.391.024-.602-.172-.798-.176-.176-.39-.456-.584-.684-.194-.228-.259-.391-.39-.652-.13-.261-.065-.49.033-.685.097-.195 1.054-2.545 1.443-3.486.376-.912.756-.788 1.039-.803.264-.014.568-.016.883-.016.315 0 .828.118 1.261.587.433.47 1.652 1.614 1.652 3.938 0 2.324 1.692 4.57 1.926 4.882.234.312 3.332 5.083 8.074 7.124 1.129.486 2.01.777 2.695.994 1.132.36 2.164.309 2.977.187.906-.135 2.784-1.138 3.175-2.237.391-1.099.391-2.043.274-2.237-.117-.195-.431-.312-.821-.508z"/>
               </svg>
-              Dispatch Booking Details via WhatsApp
+              व्हॉट्सॲपवर बुकिंग पाठवा (Book via WhatsApp)
             </button>
           </form>
         </div>
@@ -204,7 +204,7 @@ function App() {
       {/* --- ENTERPRISE FOOTER --- */}
       <footer className="bg-slate-900 text-slate-400 py-12 text-center border-t border-slate-800">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p>© 2026 Shree Ganesh Hair Salon. All engineering protocols reserved.</p>
+          <p>© 2026 श्री गणेश हेअर सलून. सर्व हक्क राखीव.</p>
           <p className="text-xs text-slate-500 font-mono">Platform optimized by BeatsVibe Framework.</p>
         </div>
       </footer>
